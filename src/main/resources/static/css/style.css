@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --red: #ee1d52;
+  --blue: #69c9d0;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --light: #eee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--darkest);
+  /* margin: auto; */
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--darker);
+
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  left: 0;
+  width: 100%;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+
+  scroll-margin-bottom: 1em;
+  gap: 1em;
+}
+
+.nav-list > li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex: 1;
+}
+
+.nav-link {
+  text-align: center;
+  font-family: Orbitron;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: crimson;
+}
+
+.nav-link :hover {
+  animation: hover-animation 2s infinite;
+}
+
+@keyframes hover-animation {
+  0% {
+    text-shadow: 0 0 0 var(--purple);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--purple);
+  }
+  100% {
+    text-shadow: 0 0 0 var(--purple);
+  }
+}
+
+:target {
+  animation: target-animation 2s normal;
+}
+
+@keyframes target-animation {
+  0% {
+    text-shadow: 0 0 50px crimson;
+  }
+  100% {
+    text-shadow: 0 0 10px crimson;
+  }
+}
+
+.title {
+  font-family: "Vampiro One", cursive;
+  color: var(--light);
+  text-align: center;
+  animation: pulse-animation 4s infinite;
+  padding: 1em;
+}
+
+.section-title {
+  font-family: "Vampiro One", cursive;
+  text-align: center;
+  color: var(--blue);
+}
+
+section {
+  margin: auto;
+  text-align: center;
+  font-family: "Neuton", serif;
+  width: 75%;
+}
+
+section p {
+  color: var(--light);
+}
+
+section a {
+  text-decoration: none;
+  color: var(--red);
+}
+
+#projects {
+  width: fit-content;
+}
+
+#projects p {
+  color: var(--red);
+  cursor: pointer;
+}
+
+#projects > p:hover {
+  background-color: var(--pink);
+  color: var(--purple);
+}
+
+@keyframes pulse-animation {
+  0% {
+    text-shadow: 2px 2px var(--blue), -2px -2px var(--red), 0 0 1px crimson;
+  }
+  50% {
+    text-shadow: 2px 2px var(--blue), -2px -2px var(--red), 0 0 50px crimson;
+  }
+  100% {
+    text-shadow: 2px 2px var(--blue), -2px -2px var(--red), 0 0 1px crimson;
+  }
+}
+
+.clock {
+  display: none;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: var(--light);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 1em;
+  max-width: 80%; /* Could be more or less, depending on screen size */
+  font-family: "Neuton", serif;
+  font-size: 1em;
+}
+
+#close {
+  color: #aaa;
+  float: right;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#close:hover,
+#close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: var(--dark);
+  font-family: "Neuton", serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 5em;
+  }
+
+  .section-title {
+    font-size: 3em;
+  }
+
+  section > p {
+    font-size: 2em;
+  }
+
+  .nav-list {
+    font-size: 2em;
+  }
+
+  .clock {
+    display: block;
+    color: var(--blue);
+    font-family: Orbitron;
+  }
+
+  .modal-content {
+    font-size: 3em;
+  }
+}
