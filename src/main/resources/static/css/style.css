@@ -145,7 +145,7 @@ section a {
   }
 }
 
-.clock {
+#clock {
   display: none;
 }
 
@@ -209,7 +209,7 @@ footer {
     font-size: 2em;
   }
 
-  .clock {
+  #clock > div {
     display: block;
     color: var(--blue);
     font-family: Orbitron;
