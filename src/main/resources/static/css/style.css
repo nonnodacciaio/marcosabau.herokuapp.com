@@ -209,8 +209,11 @@ footer {
     font-size: 2em;
   }
 
-  #clock > div {
+  #clock {
     display: block;
+  }
+
+  #clock > div {
     color: var(--blue);
     font-family: Orbitron;
   }
