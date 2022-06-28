@@ -53,12 +53,13 @@ body {
   font-family: Orbitron;
 }
 
-.nav-link a {
+a {
   text-decoration: none;
   color: crimson;
 }
 
-.nav-link :hover {
+.nav-link :hover,
+a {
   animation: hover-animation 2s infinite;
 }
 
