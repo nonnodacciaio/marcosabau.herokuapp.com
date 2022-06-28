@@ -53,13 +53,14 @@ body {
   font-family: Orbitron;
 }
 
-a {
+.nav-link a,
+section a {
   text-decoration: none;
   color: crimson;
 }
 
 .nav-link :hover,
-a {
+section a :hover {
   animation: hover-animation 2s infinite;
 }
 
