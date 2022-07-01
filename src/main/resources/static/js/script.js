@@ -22,7 +22,7 @@ $(document).ready(function () {
         let min = date.getMinutes();
         let sec = date.getSeconds();
         let time = hour + ":" + min + ":" + sec;
-        $(".clock").text(time);
+        $("#clock").text(time);
         setTimeout($.fn.showTime, 1000);
     }
 
