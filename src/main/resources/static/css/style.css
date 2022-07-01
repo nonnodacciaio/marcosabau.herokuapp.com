@@ -189,9 +189,6 @@ footer {
 
   #clock {
     display: block;
-  }
-
-  #clock > div {
     color: var(--blue);
     font-family: Orbitron;
   }
