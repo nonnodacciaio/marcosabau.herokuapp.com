@@ -190,7 +190,6 @@ footer {
   #clock {
     display: block;
     color: var(--blue);
-    font-family: Orbitron;
   }
 
   .modal-content {
