@@ -11,4 +11,8 @@ public class PortfolioController {
         return "index";
     }
 
+    @GetMapping("/calculator")
+    public String calculator() {
+        return "calculator";
+    }
 }
