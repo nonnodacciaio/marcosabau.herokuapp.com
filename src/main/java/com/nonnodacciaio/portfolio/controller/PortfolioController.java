@@ -15,4 +15,9 @@ public class PortfolioController {
     public String calculator() {
         return "calculator";
     }
+
+    @GetMapping("/snake")
+    public String snake() {
+        return "snake";
+    }
 }
