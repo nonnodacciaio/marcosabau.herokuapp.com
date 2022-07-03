@@ -20,4 +20,9 @@ public class PortfolioController {
     public String snake() {
         return "snake";
     }
+
+    @GetMapping("/todo")
+    public String todo() {
+        return "todo";
+    }
 }
